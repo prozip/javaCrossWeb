@@ -1,0 +1,70 @@
+body {
+    font-weight: 500;
+    font-family: "Roboto Slab", serif;
+}
+h1 {
+    color: #c6282b;
+    padding-left: 25px;
+}
+a {
+    margin-right: 20px;
+}
+span {
+    margin-right: 20px;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+    background-color: #222222;
+}
+.run {
+    color: #ffff00;
+}
+.java {
+    color: #c6282b;
+}
+p {
+    margin-left: 25px;
+    color: #29b6f6;
+}
+
+/* List */
+ul {
+    counter-reset: index;
+    padding: 0;
+    max-width: 600px;
+}
+
+/* List element */
+li {
+    counter-increment: index;
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    box-sizing: border-box;
+    color: aliceblue;
+}
+
+/* Element counter */
+li::before {
+    content: counters(index, ".", decimal-leading-zero);
+    font-size: 1.5rem;
+    text-align: right;
+    font-weight: bold;
+    min-width: 50px;
+    padding-right: 12px;
+    font-variant-numeric: tabular-nums;
+    align-self: flex-start;
+    background-image: linear-gradient(to bottom, aquamarine, orangered);
+    background-attachment: fixed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Element separation */
+li + li {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
